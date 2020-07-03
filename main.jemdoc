@@ -1,0 +1,188 @@
+# jemdoc:menu{MENU}{main.html}
+= Project Progress
+
+== Week 15 (21st Apr - 27th Apr 2020)
+. Readings:
+   .. An Empirical Study of Example Forgetting during Deep Neural Network Learning.
+   .. Do Better ImageNet Models Transfer Better?
+   .. When NAS Meets Robustness: In Search of Robust Architectures against Adversarial Attacks.(Camera ready version)
+   .. Benchmarking Neural Network Robustness to Common Corruptions and Surface Variations.
+. Making the outline structure of the paper.
+. Making various timelines for the submission.
+. Running more experiments.
+. Thinking about what to do with nas meets robustness paper, as we cannot compare with them because they follow a different experimental settings.
+
+== Week 14 (14th Apr - 20th Apr 2020)
+. Working on ensemble + NAS + MAML idea.
+. Looking at ways to present CVPR_NASWS submission as a complete work for ICML workshop.
+. Looking at recently published experimental papers to extend the workshop work.
+. Running more experiments on different datasets to decide the trajectory of the workshop paper.
+. Held meetings with Gaurav regarding the same.
+
+== Week 13 (7th Apr - 13th Apr 2020)
+. Discussing the ideas for ensemble + NAS work.
+. Reading various papers related to MAML, Ensemble, searching in data space, auto augmenting data.
+. We decided to focus on the main goal of increasing the speed of NAS on large scale datasets. We plan to use bagging and MAML is some way to achieve this
+
+== Week 12 (31st Mar - 6 Apr 2020)
+. Reading Efficient Forward Architecture Search.
+  .. *Main Idea:* Start from a small network and add layers based on the requirement.
+  .. Allows you to start from what we already (densents, resnets are build with human expertise) have and build on top of it.
+  .. Inspired by Cascade-correlation and gradient boosting.
+  .. Proposed method Petridish can be used for both cell-search (a.k.a micro-search) and macro-search.
+. Reading about random forests, bagging, and other ensemble methods.
+. Ideating and discussing about how to combine NAS and ensemble.
+
+== Week 11 (24th Mar - 30 Mar 2020)
+
+. Reading Efficient Forward Architecture Search.
+. Reading about different ensemble methods watching some video lectures.
+. Cleaning the code and uploading it anonymously for CVPR_NASWS.
+. Thinking about ideas regarding future work.
+
+== Week 10 (17th Mar - 23 Mar 2020)
+
+. Running experiments for the CVPR_NASWS.
+. Completing the CVPR_NASWS paper and submitting it.
+. *Meeting:* Discussing about ensemble and NAS.
+. *TODO:* Read [https://arxiv.org/abs/1905.13360 Efficient Forward Architecture Search] paper
+
+== Week 9 (10th Mar - 16th Mar 2020)
+
+. Running experiments for the CVPR_NASWS.
+. Writing the 1st end to end submission.
+
+== Week 8 (3rd Mar - 9th Mar 2020)
+
+. Running Adversarial Experiments on CIFAR-10, Imagenet on Resnet, Densnet, VGG. Inception net, PDARTS, DARTS, NSGA net.
+. Writing the initial draft for CVPR_NASWS, discussed with sir, there were some changes that need to be made, started working on them.
+. Reading/Overviewing these papers:
+   .. Evolving Robust Neural Architectures to Defendfrom Adversarial Attacks
+   .. Understanding and Robustifying Differentiable Architecture Search
+   .. XNAS: Neural Architecture Search with Expert Advice
+   .. Tuning Hyperparameters without Grad Students: Scalable and Robust Bayesian Optimisation with Dragonfly
+   .. Searching for A Robust Neural Architecture in Four GPU Hours
+   .. Learning Resnet Blocks using Boosting Theory paper
+   .. Deep Neural Network Ensembles against Deception: Ensemble Diversity, Accuracy and Robustness
+   .. Provably Robust Boosted Decision Stumps and Trees against Adversarial Attacks
+   .. Coupled Ensembles of Neural Networks
+   .. NAS evaluation is frustratingly hard
+   .. When NAS Meets Robustness: In Search of Robust Architectures against Adversarial Attacks.
+   .. Improving Neural Architecture Search Image Classifiers via Ensemble Learning
+   .. AdaNet: Adaptive Structural Learning of Artificial Neural Networks
+   .. Sub-Architecture Ensemble Pruning in Neural Architecture Search
+
+== Week 7 (25th Feb - 2nd Mar 2020)
+
+. Completed the draft.
+. Made an outline of the stuff that needs to be done before completing the [https://sites.google.com/view/cvpr20-nas/home?authuser=0 CVPR_NASWS] paper:
+   .. List the papers that need to be discussed and cited for the NAS workshop submission.
+   .. Experiments:
+      ... Common adversarial attacks on 3 three standard architectures (Resnet, Densenet, VGG) and 2-3 NAS architectures (Pick from NAS eval is frustratingly hard paper)
+      ... Can we reproduce the results (that’ll make our argument better) of Improving NAS or When NAS meets robustness papers.
+   .. Can we simply make an ensemble kind of architecture from existing NAS papers.
+   .. Find 3-4 architectures, make ensemble and prune each of them.
+. Summarized papers for writing [https://sites.google.com/view/cvpr20-nas/home?authuser=0 CVPR_NASWS]:
+   .. Provably Robust Boosted Decision Stumps and Trees against Adversarial Attacks.
+   .. Deep Neural Network Ensembles against Deception: Ensemble Diversity, Accuracy and RobustnessLing Liu, Wenqi Wei, Ka-Ho Chow, Margaret Loper, Emre Gursoy, Stacey Truex, Yanzhao Wu.
+   .. Learning Resnet Blocks using Boosting Theory paper.
+. Ran some experiments on adversarial robustness and existing methods.
+== Week 6 (18th Feb - 24th Feb 2020)
+
+. Started working on the draft for the paper.
+. Setting up some initial experiments related to adversarial robustness and running some of the existing NAS techniques(P-DARTS)
+. Thought about the NAS + ensemble ideas and ideas for submission in the CVPR NAS workshop, ideas:
+   .. Ensemble models are generally more robust and accurate than the single architecture based models (cite Improving NAS Paper)
+   .. Ensembles will help leverage the power of different architectures (one architecture can have skip connections, others can have dense connections, etc)
+   .. All the existing DNN ensembles are handcrafted, using NAS to directly find ensembles might open new doors and might help in improving the performance, the robustness of neural network architectures.
+   .. Each of the sub-architectures in an ensemble can be used to learn different batches (or classes) of data. Which may be helpful in building specialized architectures for problems like few-shot, zero-shot, etc.
+   .. Show that most of the existing NAS based architectures are less robust (running 1-2 experiments on existing benchmarks) → As a result finding ensembles using NAS is an important problem.
+   .. Using ensembles can decrease the search space complexity. For example, As shown in the figure below, we can choose to fix a part of the network to be constant for all the architectures in the ensemble and do NAS to find the last few layers for each architecture.
+~~~
+{}{img_left}{images/diag_explain.jpeg}{}{300}{}{}
+~~~
+
+
+== Week 5 (11th Feb - 17th Feb 2020)
+
+. Thinking about ideas relevant to NAS + ensembling.
+. Reviewing some of the already read papers.
+. Reading reviews of some of the NAS papers like https://openreview.net/forum?id=HygrdpVKvr
+. Reading about ensembling techniques and looking at some relevant maths.
+
+== Week 4 (4th Feb - 10th Feb 2020)
+
+. *Readings:*
+   .. AdaNet: Adaptive Structural Learning of Artificial Neural Networks
+   .. Learning Deep ResNet Blocks Sequentially using Boosting Theory
+   .. Improving Neural Architecture Search Image Classifiers via Ensemble Learning
+. *Todo:*
+   .. We were planning to replace boosting used in Improving NAS paper with bagging and other ensembling methods, for this we'll have to first read AdaNet paper thoroughly.
+   .. Go through recent DNN+Ensembling methods survey paper.
+   .. We have two NAS + Ensembling papers, both of these are not accepted anywhere. We'll go through these thoroughly and try to find out the reasons for not getting accepted.
+   .. Write the draft for paper and submit.
+
+== Week 3 (28th Jan - 3rd Feb 2020)
+
+. *Readings:*
+   .. Improving Neural Architecture Search Image Classifiers via Ensemble Learning
+   .. Sub-Architecture Ensemble Pruning in Neural Architecture Search
+   .. NAS Evaluation Is Frustratingly Hard
+. *Minutes of meeting with Vineeth Sir:*
+   .. *Ideas discussed:*
+      ... Training a neural network by training sub-architectures separately
+      ... DNN accelerators focus on reducing the energy consumed during inference which is majorly governed by the data movement, designing DNNs that optimize the data movement based on architecture.
+      ... NAS for MAML
+      ... Treat a Resnet like architecture as Supernet + MAML
+      ... Gradient Boosting + Improving NAS paper, (Ensemble method along with NAS in general)
+. *Todo (Next Steps):*
+   .. Decide on which idea to pursue next.
+   .. Read the above mentioned two papers and see if we can replace boosting with Bagging
+   .. Read: Learning Resnet Blocks using Boosting Theory paper
+
+== Week 2 (21st Jan - 27th Jan 2020)
+
+. *Readings:*
+   .. Neural Architecture Search: A Survey
+   .. Best Practices for Scientific Research on Neural Architecture Search
+   .. AdversarialNAS: Adversarial Neural Architecture Search for GANs
+   .. AutoGAN: Neural Architecture Search for Generative Adversarial Networks
+   .. Evolving Robust Neural Architectures to Defend from Adversarial Attacks
+   .. Adversarial Robustness vs. Model Compression, or Both?
+   .. When NAS Meets Robustness: In Search of Robust Architectures against Adversarial Attacks
+   .. Adversarial Robustness of Pruned Neural Networks
+. *Presentation:*
+   .. When NAS Meets Robustness: In Search of Robust Architectures against Adversarial Attacks
+   .. Network Pruning via Transformable Architecture Search
+. *Todo (Next Steps):*
+   .. The problem statement we currently have seems to overlap with many existing papers.
+   .. Brainstorm and finalize the problem statement this week
+
+== Week 1 (13th Jan - 20th Jan 2020)
+
+. Building background on adversarial networks:
+   .. *Readings:* Intriguing Properties  of  Adversarial Examples
+   .. *Videos Watched:*
+       ... [https://www.youtube.com/watch?v=CIfsB_EYsVI Adversarial Examples and Training, CS231n]
+       ... [https://www.youtube.com/watch?v=sucqskXRkss Adversarial Machine Learning, ICLR 2019 talk]
+. Building background on NAS:
+   .. *Readings:*
+       ... DARTS: Differentiable Architecture Search
+       ... Progressive Neural Architecture Search
+       ... Efficient Neural Architecture Search using Parameter Sharing
+   .. *Videos Watched:*
+       ... [https://www.youtube.com/watch?v=wL-p5cjDG64 NAS SOTA review talk, MSR]
+       ... [https://www.youtube.com/watch?v=sZMZ6nJFaJY Efficient Forward Architecture Search]
+. Finding papers relevant to NAS and Adversarial attacks, found six papers.
+. Papers Read relevant to NAS and Adversarial attacks:
+   .. Network pruning via transformable architecture Search
+   .. When NAS Meets Robustness: In Search of Robust Architectures against Adversarial Attacks
+. Some ideas in the brainstorming session:
+   .. NAS with a budget constraint (in terms of parameters and layers)
+   .. NAS for coming up with adversarially robust architectures
+   .. NAS in transfer learning, GANs, Multi-task, and Multi-Objective learning
+   .. NAS for developing architectures based on the task at hand (One-shot, Few shot etc)
+. Todo (Next Steps)
+   .. We decided to work on “NAS for coming up with adversarially robust architectures” problem, but we may have to tweak the problem statement a little bit as there are a few new papers on this topic.
+   .. Read the remaining papers.
+   .. Finalise the initial idea.
