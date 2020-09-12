@@ -1,6 +1,6 @@
 # Site wide configuration
 
-title:  akshaychandra.com         
+title:  uttaransinha.com         
 locale: en_US
 url: https://uttaransinha.com
 
@@ -24,7 +24,7 @@ kramdown:
 
 # Site owner
 owner:
-  name: Akshay L Chandra
+  name: Uttaran Sinha
   avatar: bio-photo-2.png
   position: Research Assistant at
   school: Indian Institute Of Technology Hyderabad
@@ -41,11 +41,11 @@ owner:
     ad-client:
     ad-slot:
   bing-verify:
-  github: acl21
+  github: uttaransinha
   stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
-  linkedin: acl21 #username
+  linkedin: uttaran-sinha-6779a4142  #username
   xing: #username
-  medium: acl21
+  medium:
   instagram: #username
   lastfm: #username
   tumblr: #username
