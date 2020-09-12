@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Welcome
-tags: [akshay, chandra, lagandula, iith, computer vision, machine learning, deep learning, active learning]
+tags: [uttaran, sinha, iith, computer vision, machine learning, deep learning, object detection, adversarial, robustness]
 modified: 2014-08-08T20:53:07.573882-04:00
 comments: false
 ---
@@ -9,7 +9,7 @@ comments: false
 Hi!
 I am a research assistant to [Prof. Vineeth N Balasubramanian](https://www.iith.ac.in/~vineethnb/) at [Indian Institute Of Technology Hyderabad](https://cse.iith.ac.in/), mainly working on deep active learning for image data. My interests are in the intersection of computer vision and learning with limited labeled data. I also collaborated with [Prof. Wei Guo](https://scholar.google.co.jp/citations?user=pnMyJLEAAAAJ&hl=zh-CN) (UTokyo) while working on plant phenotyping tasks.  
 
-Before joining Dr. Vineeth's group in December 2018, I spent 16 months working on machine learning and data science projects at [GGK Technologies](https://ggktech.com/), a service-based company in Hyderabad. At GGK Technologies, I spent most of my time learning, implementing, and optimizing various machine learning/deep learning pipelines for clients in US health care and retail domains.
+Before joining Dr. Vineeth's group in December 2019, I spent 16 months working on machine learning and data science projects at [GGK Technologies](https://ggktech.com/), a service-based company in Hyderabad. At GGK Technologies, I spent most of my time learning, implementing, and optimizing various machine learning/deep learning pipelines for clients in US health care and retail domains.
 
 I completed my undergraduate from Department of Computer Science and Engineering, [Jawaharlal Nehru Technological Univeristy](https://jntuh.ac.in/) affiliated college [Keshav Memorial Institute Of Technology](https://kmit.in/) in 2017. I also got myself a PG Diploma in [Applied Statistics](https://github.com/acl21/PGDAST/blob/master/Programme%20Guide%20-%20PGDAST.pdf) from open university [IGNOU](http://www.ignou.ac.in/) in 2018.
 

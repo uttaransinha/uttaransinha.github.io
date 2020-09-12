@@ -1,8 +1,8 @@
 # Site wide configuration
 
-title:  uttaransinha.com         
+title:  uttaransinha.github.io         
 locale: en_US
-url: https://uttaransinha.com
+url: http://127.0.0.1:4000
 
 # Jekyll configuration
 
@@ -25,7 +25,7 @@ kramdown:
 # Site owner
 owner:
   name: Uttaran Sinha
-  avatar: bio-photo-2.png
+  avatar: 
   position: Research Assistant at
   school: Indian Institute Of Technology Hyderabad
   place: Kandi, Sangareddy.
@@ -41,11 +41,11 @@ owner:
     ad-client:
     ad-slot:
   bing-verify:
-  github: uttaransinha
+  github: acl21
   stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
-  linkedin: uttaran-sinha-6779a4142  #username
+  linkedin: acl21 #username
   xing: #username
-  medium:
+  medium: acl21
   instagram: #username
   lastfm: #username
   tumblr: #username
