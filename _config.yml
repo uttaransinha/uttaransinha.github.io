@@ -1,6 +1,6 @@
 # Site wide configuration
 
-title:  Uttaran Sinha       
+title:  uttaransinha.github.io         
 locale: en_US
 url: uttaransinha.github.io
 
@@ -41,11 +41,11 @@ owner:
     ad-client:
     ad-slot:
   bing-verify:
-  github: uttaransinha
+  github: acl21
   stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
   linkedin: acl21 #username
   xing: #username
-  medium: 
+  medium: acl21
   instagram: #username
   lastfm: #username
   tumblr: #username
