@@ -1,1 +1,77 @@
-theme: jekyll-theme-midnight
+# Site wide configuration
+
+title:  akshaychandra.com         
+locale: en_US
+url: https://akshaychandra.com
+
+# Jekyll configuration
+
+permalink:   /:categories/:title/
+markdown:    kramdown
+highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
+
+# Site owner
+owner:
+  name: Akshay L Chandra
+  avatar: bio-photo-2.png
+  position: Research Assistant at
+  school: Indian Institute Of Technology Hyderabad
+  place: Kandi, Sangareddy.
+  bio:
+  email: 
+  disqus-shortname:
+  twitter: #username
+  facebook: #username
+  google:
+    plus: 
+    analytics:
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:
+  github: acl21
+  stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
+  linkedin: acl21 #username
+  xing: #username
+  medium: acl21
+  instagram: #username
+  lastfm: #username
+  tumblr: #username
+  pinterest: #username
+  foursquare: #username
+  steam: #username
+  dribbble: #username
+  youtube: #username
+  soundcloud: #username
+  weibo: #username
+  flickr: #username
+  codepen: #username
+  scholar: #username
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
